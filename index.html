@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Sans:wght@300;400;700&family=Raleway:wght@300;400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="nav__title">
+            <h1>Hangman</h1>
+        </div>
+    </nav>
+    <section class="">
+        <form class="screen" action="">
+            <label for="">Podaj swoje slowo do zgadniecia</label>
+            <input type="password">
+            <button class="setPasswordButton" type='button'>Zatwierdz</button>
+            <p>albo</p>
+            <button class="setRandomPassword" type='button'> Wylosuj słowo ! </button>
+        </form>
+    </section>
+    <section class="gameWindow screen">
+
+        <p class="livesText"> Pozostało żyć: <span class="lives"> 7 </span></p>
+
+        <p class="guessingWord"></p>
+
+        <p class="usedLetters">Użyte litery: </p>
+        <p class="usedLetters usedLetters2"></p>
+        <div class="inputSpace">
+            <input type="text" maxlength="1">
+            <button class="guessingButton" type="button"> Zgadnij litere ! </button>
+        </div>
+        <div class="shadow">
+            <div class="win">
+                <h2>Gratulacje</h2>
+                <p>Wygrales gre w wisielca</p>
+            </div>
+            <div class="lose">
+                <h2>No coz</h2>
+                <p>Przegrales gre w wisielca </p>
+                <p>Twoje hasło to było: </p>
+                <p class="password"></p>
+            </div>
+            <button class="againBtn">Zagraj ponownie</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

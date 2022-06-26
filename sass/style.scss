@@ -1,0 +1,157 @@
+:root {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-size: 62.5%;
+}
+body {
+	background-color: #333;
+	color: white;
+	font-family: 'Raleway', sans-serif;
+	min-height: 90vh;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+.nav {
+	position: absolute;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	flex-shrink: 0 0 100%;
+	h1 {
+		font-size: 4rem;
+	}
+}
+.screen {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #222;
+	border-radius: 15px;
+	padding: 1em 2em;
+}
+
+form {
+	font-size: 2rem;
+	padding: 1em 2em;
+	background-color: #222;
+	border-radius: 15px;
+	label:first-child {
+		padding: 1em 2em;
+	}
+
+	p {
+		position: relative;
+		&::after {
+			position: absolute;
+			right: -90px;
+			top: 50%;
+			transform: translateY(-50%);
+			content: '';
+			width: 75px;
+			height: 2px;
+			background-color: #fff;
+			border-radius: 15px;
+		}
+		&::before {
+			position: absolute;
+			left: -90px;
+			top: 50%;
+			transform: translateY(-50%);
+			content: '';
+			width: 75px;
+			height: 2px;
+			background-color: #fff;
+			border-radius: 15px;
+		}
+	}
+}
+.gameWindow {
+	position: relative;
+	display: none;
+	font-size: 2.5rem;
+	border-radius: 15px;
+	.livesText {
+		letter-spacing: 2px;
+		font-size: 2.5rem;
+		.lives {
+			font-weight: bolder;
+		}
+	}
+	.guessingWord {
+		letter-spacing: 10px;
+		text-transform: uppercase;
+	}
+	.usedLetters{
+		font-size: 1.5rem;
+	}
+	input {
+		width: 100px;
+	}
+
+	.shadow {
+		display: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		background-color: #000a;
+		font-size: 1.7rem;
+		border-radius: 15px;
+		.win {
+			display: none;
+			text-align: center;
+			h2 {
+				color: rgb(17, 216, 17);
+			}
+			animation: downToUp 0.4s;
+		}
+		.lose {
+			display: none;
+			text-align: center;
+			h2 {
+				color: rgb(197, 13, 13);
+			}
+			animation: downToUp 0.5s;
+		}
+		button {
+			animation: downToUp 0.6s;
+		}
+	}
+}
+input {
+	position: relative;
+	font-size: 1.7rem;
+	border: none;
+	border-radius: 5px;
+	padding: 0.35em 0.5em;
+	margin: 1em 0.5em;
+}
+button {
+	position: relative;
+	font-size: 1.5rem;
+	padding: 0.6em 1.2em;
+	margin: 0.5em 1em;
+	border-radius: 15px;
+	border: 1px solid white;
+	color: #333;
+	cursor: pointer;
+}
+
+@keyframes downToUp {
+	0% {
+		transform: translateY(70%);
+	}
+	100% {
+		transform: translateY(0%);
+	}
+}

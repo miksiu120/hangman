@@ -1,0 +1,211 @@
+:root {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #333;
+  color: white;
+  font-family: "Raleway", sans-serif;
+  min-height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav {
+  position: absolute;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  -ms-flex-negative: 0 0 100%;
+      flex-shrink: 0 0 100%;
+}
+.nav h1 {
+  font-size: 4rem;
+}
+
+.screen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #222;
+  border-radius: 15px;
+  padding: 1em 2em;
+}
+
+form {
+  font-size: 2rem;
+  padding: 1em 2em;
+  background-color: #222;
+  border-radius: 15px;
+}
+form label:first-child {
+  padding: 1em 2em;
+}
+form p {
+  position: relative;
+}
+form p::after {
+  position: absolute;
+  right: -90px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  content: "";
+  width: 75px;
+  height: 2px;
+  background-color: #fff;
+  border-radius: 15px;
+}
+form p::before {
+  position: absolute;
+  left: -90px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  content: "";
+  width: 75px;
+  height: 2px;
+  background-color: #fff;
+  border-radius: 15px;
+}
+
+.gameWindow {
+  position: relative;
+  display: none;
+  font-size: 2.5rem;
+  border-radius: 15px;
+}
+.gameWindow .livesText {
+  letter-spacing: 2px;
+  font-size: 2.5rem;
+}
+.gameWindow .livesText .lives {
+  font-weight: bolder;
+}
+.gameWindow .guessingWord {
+  letter-spacing: 10px;
+  text-transform: uppercase;
+}
+.gameWindow .usedLetters {
+  font-size: 1.5rem;
+}
+.gameWindow input {
+  width: 100px;
+}
+.gameWindow .shadow {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.6666666667);
+  font-size: 1.7rem;
+  border-radius: 15px;
+}
+.gameWindow .shadow .win {
+  display: none;
+  text-align: center;
+  -webkit-animation: downToUp 0.4s;
+          animation: downToUp 0.4s;
+}
+.gameWindow .shadow .win h2 {
+  color: rgb(17, 216, 17);
+}
+.gameWindow .shadow .lose {
+  display: none;
+  text-align: center;
+  -webkit-animation: downToUp 0.5s;
+          animation: downToUp 0.5s;
+}
+.gameWindow .shadow .lose h2 {
+  color: rgb(197, 13, 13);
+}
+.gameWindow .shadow button {
+  -webkit-animation: downToUp 0.6s;
+          animation: downToUp 0.6s;
+}
+
+input {
+  position: relative;
+  font-size: 1.7rem;
+  border: none;
+  border-radius: 5px;
+  padding: 0.35em 0.5em;
+  margin: 1em 0.5em;
+}
+
+button {
+  position: relative;
+  font-size: 1.5rem;
+  padding: 0.6em 1.2em;
+  margin: 0.5em 1em;
+  border-radius: 15px;
+  border: 1px solid white;
+  color: #333;
+  cursor: pointer;
+}
+
+@-webkit-keyframes downToUp {
+  0% {
+    -webkit-transform: translateY(70%);
+            transform: translateY(70%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes downToUp {
+  0% {
+    -webkit-transform: translateY(70%);
+            transform: translateY(70%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}/*# sourceMappingURL=style.css.map */
